@@ -4,15 +4,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace SysOtica.Negócio.RegrasNegocio
 {
     public class ClienteControlador
     {
+        string modelo_Email = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+        string caracteres = @"[a-zA-Z]+$";
+        string numeros = @"[0-9]+$";
+        string LetraseNum = "[^0-9a-zA-Z]+";
+
         IClienteDados cl = new ClienteDados();
 
-        public void verificaPreenchimento(Cliente cliente)
+
+        
+        public Boolean verificaPreenchimento(Cliente cliente)
         {
             if (String.IsNullOrEmpty(cliente.Cl_nome))
             {
@@ -87,7 +95,46 @@ namespace SysOtica.Negócio.RegrasNegocio
             {
                 throw new CampoVazioException("UF Vazio!");
             }
+            return true;
         }
+
+
+        //public void ValidaCliente(Cliente cliente)
+        //{
+        //    if (cliente.Cl_bairro.Length < 3 || (!Regex.IsMatch(cliente.Cl_bairro, caracteres)))
+        //    {
+        //        throw new CampoVazioException("Numero de caracteres inferior ou dados do Bairro inválidos, favor tente novamente");
+        //    }
+        //    if (cliente.Cl_celular.Length < 7 || (!Regex.IsMatch(cliente.Cl_celular, LetraseNum)))
+        //    {
+        //        throw new CampoVazioException("Numero de caracteres inferior ou dados do Local invalidos, favor tente novamente");
+        //    }
+        //    if (local.Lc_numero.Equals("0") || local.Lc_numero.Length > 5 || (!Regex.IsMatch(local.Lc_numero, numeros)))
+        //    {
+        //        throw new CampoVazioException("Campo numero Invalido, favor tente novamente");
+        //    }
+        //    if (local.Lc_bairro.Length < 4 || (!Regex.IsMatch(local.Lc_bairro, LetraseNum)))
+        //    {
+        //        throw new CampoVazioException("Campo bairro Invalido, favor tente novamente");
+        //    }
+        //    if (local.Lc_uf.Length > 2 || (!Regex.IsMatch(local.Lc_uf, caracteres)))
+        //    {
+        //        throw new CampoVazioException("Campo UF Invalido, favor tente novamente");
+        //    }
+        //    if (local.Lc_cidade.Length < 4 || (!Regex.IsMatch(local.Lc_cidade, caracteres)))
+        //    {
+        //        throw new CampoVazioException("Campo Cidade Invalido, favor tente novamente");
+        //    }
+        //    if (!Regex.IsMatch(local.Lc_email, modelo_Email))
+        //    {
+        //        throw new CampoVazioException("Campo Email Invalido, favor tente novamente");
+        //    }
+
+
+
+        //}
+
+
 
         public void Inserir(Cliente cliente)
         {
