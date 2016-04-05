@@ -58,6 +58,7 @@ namespace SysOtica.Negócio
         {
 
             localcontrolador.verificaPreenchimento(local);
+            localcontrolador.ValidaLocal(local);
             localcontrolador.Inserir(local);
 
         }
