@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SysOtica.Conexão;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,23 @@ namespace SysOticaForm
         public frmListarProduto()
         {
             InitializeComponent();
+        }
+
+        private void buttonSair_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void frmListarProduto_Load(object sender, EventArgs e)
+        {
+            dataGridViewListarProduto.AutoGenerateColumns = false;
+            //Atribuo o list retornado pelo método ao DataSource do grid
+            dataGridViewListarProduto.DataSource = new ProdutoDados().listarProduto();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -195,6 +195,9 @@
     <EmbeddedResource Include="frmListarMedico.resx">
       <DependentUpon>frmListarMedico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListarProduto.resx">
+      <DependentUpon>frmListarProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListarUsuario.resx">
       <DependentUpon>frmListarUsuario.cs</DependentUpon>
     </EmbeddedResource>
