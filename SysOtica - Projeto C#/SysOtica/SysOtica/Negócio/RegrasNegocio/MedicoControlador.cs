@@ -50,11 +50,11 @@ namespace SysOtica.Negócio.RegrasNegocio
             }
                 else if (medico.Md_nome == "." || medico.Md_nome == "-")
                 {
-                    throw new CampoVazioException("  dados invalidos");
+                    throw new CampoVazioException("  dados no campo medico invalidos");
                 }
                 else if (medico.Md_crm == "." || medico.Md_crm == "-")
                 {
-                    throw new CampoVazioException("  dados invalidos");
+                    throw new CampoVazioException("  CRM invalidos");
                 }
                 else if (!Regex.IsMatch(medico.Md_nome, caracteres) || (Regex.IsMatch(medico.Md_nome, numeros)))
                 {

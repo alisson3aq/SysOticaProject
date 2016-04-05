@@ -42,11 +42,39 @@ namespace SysOticaForm
                 new LocalDados().Inserir(local);
                 //new LocalDados().Inserir(local);
                 MessageBox.Show("Local cadastrado com sucesso!");
+                LimparCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro no Cadastro" + ex.Message);
             }
+        }
+
+
+        public void LimparCampos()
+        {
+            textBoxNomeclinica.Text = "";
+            textBoxEndereco.Text = ""; 
+            textBoxNumero.Text = "";
+            textBoxBairro.Text = "";
+            textBoxCidade.Text = "";
+            textBoxUF.Text = "";
+            maskedTextBoxCEP.Text = "";
+            maskedTextBoxTelefone.Text = "";
+            textBoxEmail.Text = "";
+
+        }
+
+
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
         }
     }
 }
