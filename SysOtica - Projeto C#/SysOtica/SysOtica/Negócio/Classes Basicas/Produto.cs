@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibrary1;
 
 namespace SysOtica
 {
@@ -17,8 +18,7 @@ namespace SysOtica
         private int pr_valor;
         private int pr_qtd;
         private int pr_estoqueminimo;
-        private int fornecedor_Id;
-        private Fornecedor fr_id;
+        Fornecedor fr_id;
 
         public int Pr_id
         {
@@ -124,7 +124,7 @@ namespace SysOtica
             }
         }
 
-        public Fornecedor Fr_id
+        internal Fornecedor Fr_id
         {
             get
             {
@@ -137,17 +137,5 @@ namespace SysOtica
             }
         }
 
-        public int Fornecedor_Id
-        {
-            get
-            {
-                return fornecedor_Id;
-            }
-
-            set
-            {
-                fornecedor_Id = value;
-            }
-        }
     }
 }

@@ -135,6 +135,7 @@ namespace SysOtica.Conexão
 
         public List<Produto> listarProduto()
         {
+            
             {
                 this.Conectar();
 
@@ -148,6 +149,7 @@ namespace SysOtica.Conexão
                     while (dr.Read())
                     {
                         Produto prod = new Produto();
+                        Fornecedor forn = new Fornecedor();
                         prod.Pr_id = Convert.ToInt32(dr["pr_id"]);
                         prod.Pr_descricao = dr["pr_descricao"].ToString();
                         prod.Pr_unidade = dr["pr_unidade"].ToString();
@@ -156,7 +158,9 @@ namespace SysOtica.Conexão
                         prod.Pr_valor = Convert.ToInt32(dr["pr_valor"].ToString());
                         prod.Pr_qtd = Convert.ToInt32(dr["pr_qtd"].ToString());
                         prod.Pr_estoqueminimo = Convert.ToInt32(dr["pr_estoqueminimo"].ToString());
-                    
+                        //prod.Fornecedor
+                        prod.Fr_id.Fr_id = Convert.ToInt32(dr["fr_id"].ToString());
+
                         lista.Add(prod);
                     }
 
