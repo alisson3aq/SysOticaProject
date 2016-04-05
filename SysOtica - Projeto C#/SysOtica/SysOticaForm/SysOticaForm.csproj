@@ -112,12 +112,6 @@
     <Compile Include="frmListarMedico.Designer.cs">
       <DependentUpon>frmListarMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListarProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListarProduto.Designer.cs">
-      <DependentUpon>frmListarProduto.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmListarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListarMedico.resx">
       <DependentUpon>frmListarMedico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListarProduto.resx">
-      <DependentUpon>frmListarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListarUsuario.resx">
       <DependentUpon>frmListarUsuario.cs</DependentUpon>
