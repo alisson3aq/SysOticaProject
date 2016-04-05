@@ -30,20 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Biblioteca">
-      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Biblioteca.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Security">
-      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Mono.Security.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
-      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Npgsql.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql.EntityFramework">
-      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Npgsql.EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql.EntityFrameworkLegacy">
-      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Npgsql.EntityFrameworkLegacy.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.EntityFrameworkLegacy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
