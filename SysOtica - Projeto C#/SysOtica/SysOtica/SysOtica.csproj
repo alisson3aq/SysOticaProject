@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7000C0A-0C87-4D7C-B7BE-2F6E869F6F05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SysOtica</RootNamespace>
+    <AssemblyName>SysOtica</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Biblioteca">
+      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Biblioteca.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql.EntityFramework">
+      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Npgsql.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql.EntityFrameworkLegacy">
+      <HintPath>..\..\..\..\..\ADS03NA\DSD\Projetos\ConexaoBD2016\Biblioteca\bin\Debug\Npgsql.EntityFrameworkLegacy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Conexão\ClienteDados.cs" />
+    <Compile Include="Conexão\ConexaoBDInterface.cs" />
+    <Compile Include="Conexão\FornecedorDados.cs" />
+    <Compile Include="Conexão\IClienteDados.cs" />
+    <Compile Include="Conexão\IConexaoBD.cs" />
+    <Compile Include="Conexão\IFornecedorDados.cs" />
+    <Compile Include="Conexão\ILocalDados.cs" />
+    <Compile Include="Conexão\IMedicoDados.cs" />
+    <Compile Include="Conexão\IProdutoDados.cs" />
+    <Compile Include="Conexão\IReceitaDados.cs" />
+    <Compile Include="Conexão\IUsuarioDados.cs" />
+    <Compile Include="Conexão\LocalDados.cs" />
+    <Compile Include="Conexão\MedicoDados.cs" />
+    <Compile Include="Conexão\ProdutoDados.cs" />
+    <Compile Include="Conexão\ReceitaDados.cs" />
+    <Compile Include="Conexão\UsuarioDados.cs" />
+    <Compile Include="Negócio\Classes Basicas\Agenda.cs" />
+    <Compile Include="Negócio\Classes Basicas\Cliente.cs" />
+    <Compile Include="Conexão\ConexaoBD.cs" />
+    <Compile Include="Negócio\Classes Basicas\Consulta.cs" />
+    <Compile Include="Negócio\Classes Basicas\Fornecedor.cs" />
+    <Compile Include="Negócio\Classes Basicas\Local.cs" />
+    <Compile Include="Negócio\Classes Basicas\Medico.cs" />
+    <Compile Include="Negócio\Classes Basicas\Produto.cs" />
+    <Compile Include="Negócio\Classes Basicas\ProdutoFornecedor.cs" />
+    <Compile Include="Negócio\Classes Basicas\ProdutoVenda.cs" />
+    <Compile Include="Negócio\Classes Basicas\Venda.cs" />
+    <Compile Include="Negócio\Exception\CampoVazioException.cs" />
+    <Compile Include="Negócio\Fachada.cs" />
+    <Compile Include="Negócio\RegrasNegocio\AgendaControlador.cs" />
+    <Compile Include="Negócio\RegrasNegocio\ClienteControlador.cs" />
+    <Compile Include="Negócio\RegrasNegocio\ConsultaControlador.cs" />
+    <Compile Include="Negócio\RegrasNegocio\FornecedorControlador.cs" />
+    <Compile Include="Negócio\RegrasNegocio\LocalControlador.cs" />
+    <Compile Include="Negócio\RegrasNegocio\MedicoControlador.cs" />
+    <Compile Include="Negócio\RegrasNegocio\ProdutoControlador.cs" />
+    <Compile Include="Negócio\RegrasNegocio\ReceitaControlador.cs" />
+    <Compile Include="Negócio\RegrasNegocio\UsuarioControlador.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Negócio\Classes Basicas\Receita.cs" />
+    <Compile Include="Negócio\Classes Basicas\Usuario.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

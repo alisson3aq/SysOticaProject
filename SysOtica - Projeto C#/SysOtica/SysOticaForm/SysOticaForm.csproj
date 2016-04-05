@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2DD3494-5C22-40B4-8B2A-A20FEC09DF69}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SysOticaForm</RootNamespace>
+    <AssemblyName>SysOticaForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formProduto.Designer.cs">
+      <DependentUpon>formProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgenda.Designer.cs">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta.Designer.cs">
+      <DependentUpon>frmConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFornecedor.Designer.cs">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarAgenda.Designer.cs">
+      <DependentUpon>frmListarAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarClientes.Designer.cs">
+      <DependentUpon>frmListarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarConsulta.Designer.cs">
+      <DependentUpon>frmListarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarFornecedor.Designer.cs">
+      <DependentUpon>frmListarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarLocal.Designer.cs">
+      <DependentUpon>frmListarLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarMedico.Designer.cs">
+      <DependentUpon>frmListarMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarProduto.Designer.cs">
+      <DependentUpon>frmListarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarUsuario.Designer.cs">
+      <DependentUpon>frmListarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocal.Designer.cs">
+      <DependentUpon>frmLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMedico1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedico1.Designer.cs">
+      <DependentUpon>frmMedico1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceita.Designer.cs">
+      <DependentUpon>frmReceita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formProduto.resx">
+      <DependentUpon>formProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgenda.resx">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta.resx">
+      <DependentUpon>frmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFornecedor.resx">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarAgenda.resx">
+      <DependentUpon>frmListarAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarClientes.resx">
+      <DependentUpon>frmListarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarConsulta.resx">
+      <DependentUpon>frmListarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarFornecedor.resx">
+      <DependentUpon>frmListarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarLocal.resx">
+      <DependentUpon>frmListarLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarMedico.resx">
+      <DependentUpon>frmListarMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarProduto.resx">
+      <DependentUpon>frmListarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarUsuario.resx">
+      <DependentUpon>frmListarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocal.resx">
+      <DependentUpon>frmLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedico1.resx">
+      <DependentUpon>frmMedico1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceita.resx">
+      <DependentUpon>frmReceita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SysOtica\SysOtica.csproj">
+      <Project>{f7000c0a-0c87-4d7c-b7be-2f6e869f6f05}</Project>
+      <Name>SysOtica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
