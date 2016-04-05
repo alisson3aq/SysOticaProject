@@ -37,12 +37,12 @@ namespace SysOticaForm
             //FornecedorDados fd = new FornecedorDados();
             //fd.Excluir(int.Parse(dataGridViewFornecedor.SelectedRows[0].Index.ToString()));
 
-            if (selectedRowCount > 0)
-            {
-                Fachada fachada = new Fachada();
-                fachada.ExcluirFornecedor(selectedRowCount);
+            //if (selectedRowCount > 0)
+            //{
+            //    Fachada fachada = new Fachada();
+            //    fachada.ExcluirFornecedor(selectedRowCount);
 
-            }
+            //}
 
 
         }
