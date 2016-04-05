@@ -13,9 +13,9 @@ namespace SysOtica.Negócio.RegrasNegocio
     {
 
         string modelo_Email = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-        string caracteres = @"[a-zA-Z]+$";
-        string numeros = @"[0-9]+$";
-        string LetraseNum = "[^0-9a-zA-Z]+";
+        string caracteres = "^[ a-zA-Z]+$";
+        string numeros = "^[ 0-9-]+$";
+        string LetraseNum = "^[0-9a-zA-Z.-]+$";
 
         ILocalDados lc = new LocalDados();
 
@@ -93,11 +93,9 @@ namespace SysOtica.Negócio.RegrasNegocio
                 throw new CampoVazioException("Campo Email Invalido, favor tente novamente");
             }
 
-
+           
 
         }
-
-
 
 
         public void Inserir(Local local)

@@ -158,6 +158,7 @@
             this.textNome.Name = "textNome";
             this.textNome.Size = new System.Drawing.Size(343, 20);
             this.textNome.TabIndex = 0;
+          
             // 
             // frmMedico1
             // 

@@ -12,8 +12,9 @@ namespace SysOtica.Negócio.RegrasNegocio
     class MedicoControlador
     {
         string modelo_Email = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-        string caracteres = @"[a-zA-Z]+$";
-        string numeros = @"[0-9]+$";
+        string caracteres = "^[ a-zA-Z]+$";
+        string numeros = "^[ 0-9-]+$";
+       // ^[A-Za-z]+
 
 
         IMedicoDados ControladorMedico = new MedicoDados();
@@ -46,27 +47,20 @@ namespace SysOtica.Negócio.RegrasNegocio
         {
                 if (medico.Md_nome.Length < 3 || medico.Md_crm.Length < 5 || medico.Md_telefone.Length < 11)
                 {
-                throw new CampoVazioException("  numero inferior de caracteres");
-            }
-                else if (medico.Md_nome == "." || medico.Md_nome == "-")
-                {
-                    throw new CampoVazioException("  dados no campo medico invalidos");
+                throw new CampoVazioException("numero inferior de caracteres");
                 }
-                else if (medico.Md_crm == "." || medico.Md_crm == "-")
-                {
-                    throw new CampoVazioException("  CRM invalidos");
-                }
+            
                 else if (!Regex.IsMatch(medico.Md_nome, caracteres) || (Regex.IsMatch(medico.Md_nome, numeros)))
                 {
-                    throw new CampoVazioException("  medico invalido");
+                    throw new CampoVazioException("campo nome invalido");
                 }
                 else if (!Regex.IsMatch(medico.Md_crm, numeros) || (Regex.IsMatch(medico.Md_crm, caracteres)))
                 {
-                    throw new CampoVazioException("  CRM Invalido");
+                    throw new CampoVazioException("campo CRM Invalido");
                 }
                 else if (!Regex.IsMatch(medico.Md_email, modelo_Email))
                 {
-                   throw new CampoVazioException("  Email Invalido");
+                   throw new CampoVazioException("campo Email Invalido");
                 }
 
         }
