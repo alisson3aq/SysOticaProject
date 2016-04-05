@@ -20,7 +20,7 @@ namespace SysOticaForm
         {
             InitializeComponent();
         }
-   
+
 
         private void buttonSair_Click(object sender, EventArgs e)
         {
@@ -43,7 +43,7 @@ namespace SysOticaForm
                 {
                     produto.Pr_descricao = tbDescricao.Text;
                     produto.Pr_unidade = cbUnidade.Text;
-                    int Fr_id = !String.IsNullOrEmpty(cbFornecedor.Text)?Convert.ToInt32(cbFornecedor.SelectedValue.ToString()):0;
+                    int Fr_id = !String.IsNullOrEmpty(cbFornecedor.Text) ? Convert.ToInt32(cbFornecedor.SelectedValue.ToString()) : 0;
                     produto.Fr_id = fachada.GetFornecedor(Fr_id);
                     produto.Pr_grupo = cbGrupo.Text;
                     produto.Pr_grife = cbGrife.Text;

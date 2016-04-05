@@ -25,12 +25,17 @@ namespace SysOticaForm
 
         private void frmListarProduto_Load(object sender, EventArgs e)
         {
-            dataGridViewListarProduto.AutoGenerateColumns = false;
+            dataGridViewProduto.AutoGenerateColumns = false;
             //Atribuo o list retornado pelo método ao DataSource do grid
-            dataGridViewListarProduto.DataSource = new ProdutoDados().listarProduto();
+            dataGridViewProduto.DataSource = new ProdutoDados().listarProduto();
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
         {
 
         }
