@@ -45,12 +45,7 @@ namespace SysOticaForm
 
         }
 
-        private void médicoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmMedico1 medico = new frmMedico1();
-            medico.MdiParent = this;
-            medico.Show();
-        }
+     
 
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -59,19 +54,8 @@ namespace SysOticaForm
             produto.Show();
         }
 
-        private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAgenda agenda = new frmAgenda();
-            agenda.MdiParent = this;
-            agenda.Show();
-        }
+      
 
-        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsulta consulta = new frmConsulta();
-            consulta.MdiParent = this;
-            consulta.Show();
-        }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -85,12 +69,7 @@ namespace SysOticaForm
             receita.Show();
         }
 
-        private void localToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmLocal local = new frmLocal();
-            local.MdiParent = this;
-            local.Show();
-        }
+      
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -114,21 +93,9 @@ namespace SysOticaForm
             listarUsuarios.Show();
         }
 
-        private void locaisToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmListarLocal listarLocal = new frmListarLocal();
-            listarLocal.MdiParent = this;
-            listarLocal.Show();
-        }
+     
 
-        private void médicosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmListarMedico listarMedicos = new frmListarMedico();
-            listarMedicos.MdiParent = this;
-            listarMedicos.Show();
-    
-        }
-
+ 
         private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListarProduto listarProdutos = new frmListarProduto();
@@ -136,18 +103,8 @@ namespace SysOticaForm
             listarProdutos.Show();
         }
 
-        private void agendasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmListarAgenda listarAgenda = new frmListarAgenda();
-            listarAgenda.MdiParent = this;
-            listarAgenda.Show();
-        }
+       
 
-        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmListarConsulta listarConsulta = new frmListarConsulta();
-            listarConsulta.MdiParent = this;
-            listarConsulta.Show();
-        }
+      
     }
 }

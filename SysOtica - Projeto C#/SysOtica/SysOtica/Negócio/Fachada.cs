@@ -53,15 +53,7 @@ namespace SysOtica.Negócio
         */
 
         //Salva um Local novo no banco de Dados
-        LocalControlador localcontrolador = new LocalControlador();
-        public void IncluirLocal(Local local)
-        {
-
-            localcontrolador.verificaPreenchimento(local);
-            localcontrolador.ValidaLocal(local);
-            localcontrolador.Inserir(local);
-
-        }
+        
 
 
         #endregion
@@ -74,13 +66,7 @@ namespace SysOtica.Negócio
 
         #region Carlão
 
-        MedicoControlador medControlador = new MedicoControlador();
-        public void CadastraMedico(Medico medico)
-        {
-            medControlador.VerificaPreenchimento(medico);
-            medControlador.ValidaMedico(medico);
-            medControlador.Inserir(medico);
-        }
+ 
 
         ReceitaControlador recControlador = new ReceitaControlador();
         public void CadastraReceita(Receita receita)
