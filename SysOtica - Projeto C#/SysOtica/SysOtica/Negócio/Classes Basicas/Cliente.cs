@@ -3,6 +3,7 @@ using System;
 
 namespace SysOtica.Negócio
 {
+   
     public class Cliente
     {
         private int cl_id;
