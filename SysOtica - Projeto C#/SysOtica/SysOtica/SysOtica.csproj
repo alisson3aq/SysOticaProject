@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SysOtica</RootNamespace>
     <AssemblyName>SysOtica</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,16 +32,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Security">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Mono.Security.dll</HintPath>
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Atividade\Atividade\bin\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.dll</HintPath>
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Atividade\Atividade\bin\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql.EntityFramework">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Atividade\Atividade\bin\Npgsql.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql.EntityFrameworkLegacy">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.EntityFrameworkLegacy.dll</HintPath>
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Atividade\Atividade\bin\Npgsql.EntityFrameworkLegacy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
