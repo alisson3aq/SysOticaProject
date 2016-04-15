@@ -39,7 +39,7 @@ namespace SysOticaForm
                 {
                     cliente.Cl_nome = textBoxNome.Text;
                     cliente.Cl_datanascimento = DateTime.Parse(maskedTextBoxDataNascimento.Text);
-                    cliente.Cl_cpf = maskedTextBoxCpf.Text;
+                    cliente.Cl_cpf = textBoxCPF.Text;
                     cliente.Cl_rg = textBoxRg.Text;
                     cliente.Cl_telefone = maskedTextBoxTelefone.Text;
                     cliente.Cl_celular = maskedTextBoxCelular.Text;
@@ -82,7 +82,7 @@ namespace SysOticaForm
         {
             textBoxNome.Text = "";
             DateTime.Parse(maskedTextBoxDataNascimento.Text).Equals("");
-            maskedTextBoxCpf.Text = "";
+            textBoxCPF.Text = "";
             textBoxRg.Text = "";
             maskedTextBoxTelefone.Text = "";
             maskedTextBoxCelular.Text = "";

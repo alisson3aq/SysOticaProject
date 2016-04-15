@@ -15,6 +15,8 @@ namespace SysOticaForm
 {
     public partial class frmListarClientes : Form
     {
+        List<Cliente> listaCliente;
+       
         public frmListarClientes()
         {
             InitializeComponent();
@@ -25,11 +27,34 @@ namespace SysOticaForm
             //Desabilito a geração automática de colunas
             dataGridViewCliente.AutoGenerateColumns = false;
             //Atribuo o list retornado pelo método ao DataSource do grid
-            dataGridViewCliente.DataSource = new ClienteDados().listaCliente();
+            listaCliente = new ClienteDados().listaCliente();
+            dataGridViewCliente.DataSource = listaCliente;
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridViewCliente_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridViewCliente.SelectedRows[0].Index >= 0)
+            {
+                Cliente clienteSelecionado = listaCliente.ElementAt(dataGridViewCliente.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Clique em pesquisar");
+            }
+        }
+
+        private void buttonPesquisar_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            IClienteDados dc = new ClienteDados();
+            string cl_cpf = textBoxPesqCPF.Text;
+            dataGridViewCliente.DataSource = dc.pesquisarCliente(cl_cpf);
 
         }
     }
