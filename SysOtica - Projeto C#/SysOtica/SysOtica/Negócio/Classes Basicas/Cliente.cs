@@ -1,9 +1,10 @@
 ﻿using ClassLibrary1;
 using System;
+using System.Collections.Generic;
 
 namespace SysOtica.Negócio
 {
-   
+
     public class Cliente
     {
         private int cl_id;
@@ -25,38 +26,16 @@ namespace SysOtica.Negócio
         private String cl_profissao;
         private String cl_observacoes;
         private String cl_uf;
+        private List<Receita> rc_id;
 
-        public Cliente()
-        {
-            cl_id = 0;
-            cl_nome = null;
-            cl_datanascimento = Convert.ToDateTime(null);
-            cl_cpf = null;
-            cl_rg = null;
-            cl_telefone = null;
-            cl_celular = null;
-            cl_telefone2 = null;
-            cl_cep = null;
-            cl_endereco = null;
-            cl_numero = null;
-            cl_bairro = null;
-            cl_cidade = null;
-            cl_email = null;
-            cl_nomepai = null;
-            cl_nomemae = null;
-            cl_profissao = null;
-            cl_observacoes = null;
-            cl_uf = null;
-
-        }
-        public Cliente( int cl_id, String cl_nome, DateTime cl_datanascimento, String cl_cpf, String cl_rg, String cl_telefone, String cl_celular, String cl_telefone2, String cl_cep, String cl_endereco, String cl_numero, String cl_bairro, String cl_cidade, String cl_email, String cl_nomepai, String cl_nomemae, String cl_profissao, String cl_observacoes, String cl_uf)
+        public Cliente(int cl_id, string cl_nome, DateTime cl_datanascimento, string cl_cpf, string cl_rg, string cl_telefone, string cl_celular, string cl_telefone2, string cl_cep, string cl_endereco, string cl_numero, string cl_bairro, string cl_cidade, string cl_email, string cl_nomepai, string cl_nomemae, string cl_profissao, string cl_observacoes, string cl_uf, List<Receita> rc_id)
         {
             this.cl_id = cl_id;
             this.cl_nome = cl_nome;
             this.cl_datanascimento = cl_datanascimento;
             this.cl_cpf = cl_cpf;
             this.cl_rg = cl_rg;
-            this.Cl_telefone = cl_telefone;
+            this.cl_telefone = cl_telefone;
             this.cl_celular = cl_celular;
             this.cl_telefone2 = cl_telefone2;
             this.cl_cep = cl_cep;
@@ -70,7 +49,12 @@ namespace SysOtica.Negócio
             this.cl_profissao = cl_profissao;
             this.cl_observacoes = cl_observacoes;
             this.cl_uf = cl_uf;
-    }
+            this.rc_id = new List<Receita>();
+        }
+
+        public Cliente()
+        {
+        }
 
         public int Cl_id
         {
@@ -316,6 +300,19 @@ namespace SysOtica.Negócio
             set
             {
                 cl_uf = value;
+            }
+        }
+
+        public List<Receita> Rc_id
+        {
+            get
+            {
+                return rc_id;
+            }
+
+            set
+            {
+                rc_id = value;
             }
         }
     }

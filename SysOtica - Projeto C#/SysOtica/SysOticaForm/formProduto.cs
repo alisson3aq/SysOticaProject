@@ -93,5 +93,11 @@ namespace SysOticaForm
             cbFornecedor.DisplayMember = "fr_fantasia";
             cbFornecedor.ValueMember = "fr_id";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmFornecedor nvfrn = new frmFornecedor();
+            nvfrn.Show();
+        }
     }
 }

@@ -4,19 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary1;
+using SysOtica.Negócio;
 
 namespace SysOtica
 {
     public class Usuario
     {
 
-        private int us_id;
+        private int     us_id;
         private String us_senha;
         private String us_endereco;
         private String us_telefone;
         private String us_tipo;
         private String us_usuario;
         private String us_nome;
+        private List<Venda> venda;
+
+        public Usuario(int us_id, string us_senha, string us_endereco, string us_telefone, string us_tipo, string us_usuario, string us_nome, List<Venda> venda)
+        {
+            this.us_id = us_id;
+            this.us_senha = us_senha;
+            this.us_endereco = us_endereco;
+            this.us_telefone = us_telefone;
+            this.us_tipo = us_tipo;
+            this.us_usuario = us_usuario;
+            this.us_nome = us_nome;
+            this.venda = new List<Venda>();
+        }
+
+        public Usuario()
+        {
+        }
 
         public int Us_id
         {
@@ -106,6 +124,19 @@ namespace SysOtica
             set
             {
                 us_nome = value;
+            }
+        }
+
+        public List<Venda> Venda
+        {
+            get
+            {
+                return venda;
+            }
+
+            set
+            {
+                venda = value;
             }
         }
     }

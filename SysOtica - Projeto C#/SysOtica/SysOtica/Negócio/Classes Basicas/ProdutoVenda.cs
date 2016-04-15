@@ -6,11 +6,37 @@ using System.Threading.Tasks;
 
 namespace SysOtica.Negócio
 {
-   public class ProdutoVenda
+    public class ProdutoVenda
     {
-        private Produto pr_id;
+        private int pv_id;
+        private List<Produto> pr_id;
         private Venda vn_id;
         private DateTime pv_dtsaida;
+
+        public ProdutoVenda(int pv_id, Produto pr_id, Venda vn_id, DateTime pv_dtsaida)
+        {
+            this.pv_id = pv_id;
+            this.pr_id = new List<Produto>();
+            this.vn_id = new Venda();
+            this.pv_dtsaida = pv_dtsaida;
+        }
+
+        public ProdutoVenda()
+        {
+        }
+
+        public int Pv_id
+        {
+            get
+            {
+                return pv_id;
+            }
+
+            set
+            {
+                pv_id = value;
+            }
+        }
 
         public Produto Pr_id
         {

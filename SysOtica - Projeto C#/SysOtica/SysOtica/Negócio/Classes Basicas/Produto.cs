@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary1;
+using SysOtica.Negócio;
 
 namespace SysOtica
 {
@@ -18,7 +19,24 @@ namespace SysOtica
         private int pr_valor;
         private int pr_qtd;
         private int pr_estoqueminimo;
-        Fornecedor fr_id;
+        private Fornecedor fr_id;
+        private ProdutoVenda pv_id;
+        private ProdutoFornecedor pf_id;
+
+        public Produto(int pr_id, string pr_descricao, string pr_unidade, string pr_grupo, string pr_grife, int pr_valor, int pr_qtd, int pr_estoqueminimo, Fornecedor fr_id, ProdutoVenda pv_id, ProdutoFornecedor pf_id)
+        {
+            this.pr_id = pr_id;
+            this.pr_descricao = pr_descricao;
+            this.pr_unidade = pr_unidade;
+            this.pr_grupo = pr_grupo;
+            this.pr_grife = pr_grife;
+            this.pr_valor = pr_valor;
+            this.pr_qtd = pr_qtd;
+            this.pr_estoqueminimo = pr_estoqueminimo;
+            this.fr_id = new Fornecedor();
+            this.pv_id = new ProdutoVenda();
+            this.pf_id = new ProdutoFornecedor();
+        }
 
         public int Pr_id
         {
@@ -124,7 +142,7 @@ namespace SysOtica
             }
         }
 
-        internal Fornecedor Fr_id
+        public Fornecedor Fr_id
         {
             get
             {
@@ -137,5 +155,30 @@ namespace SysOtica
             }
         }
 
+        public ProdutoVenda Pv_id
+        {
+            get
+            {
+                return pv_id;
+            }
+
+            set
+            {
+                pv_id = value;
+            }
+        }
+
+        public ProdutoFornecedor Pf_id
+        {
+            get
+            {
+                return pf_id;
+            }
+
+            set
+            {
+                pf_id = value;
+            }
+        }
     }
 }
