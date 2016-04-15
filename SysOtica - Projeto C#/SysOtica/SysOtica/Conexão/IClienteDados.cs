@@ -10,7 +10,6 @@ namespace SysOtica.Conexão
         void Excluir(Cliente cliente);
         void Inserir(Cliente cliente);
         List<Cliente> listaCliente();
-        Cliente RetornaCliente(Cliente filtro);
-        List<Cliente> Select(Cliente filtro);
+        List<Cliente> pesquisarCliente(string cl_cpf);
     }
 }

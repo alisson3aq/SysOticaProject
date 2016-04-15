@@ -99,6 +99,7 @@
             this.buttonPesquisar.TabIndex = 3;
             this.buttonPesquisar.Text = "Pesquisar";
             this.buttonPesquisar.UseVisualStyleBackColor = true;
+            this.buttonPesquisar.Click += new System.EventHandler(this.buttonPesquisar_Click);
             // 
             // maskedTextBoxCPF
             // 
@@ -132,11 +133,12 @@
             this.Column17,
             this.Column18,
             this.Column13});
-            this.dataGridViewCliente.Location = new System.Drawing.Point(17, 51);
+            this.dataGridViewCliente.Location = new System.Drawing.Point(14, 62);
             this.dataGridViewCliente.Name = "dataGridViewCliente";
             this.dataGridViewCliente.ReadOnly = true;
             this.dataGridViewCliente.Size = new System.Drawing.Size(986, 223);
             this.dataGridViewCliente.TabIndex = 0;
+            this.dataGridViewCliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewCliente_MouseClick);
             // 
             // Column1
             // 

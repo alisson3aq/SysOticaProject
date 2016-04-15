@@ -179,53 +179,57 @@ namespace SysOtica.Conexão
             this.Desconectar();
             return lista;
         }
-
-       /* public Cliente RetornaCliente(Cliente filtro)
+        public List<Cliente> pesquisarCliente(string cl_cpf)
         {
-            Cliente retorno = new Cliente();
-            try
-            {
-                this.Conectar();
-                String sql = "select cl_id, cl_nome, cl_datanascimento, cl_cpf, cl_rg, cl_telefone, cl_celular, cl_telefone2, cl_cep, cl_endereco, cl_numero, cl_bairro, cl_cidade, cl_email, cl_nomepai, cl_nomemae, cl_profissao, cl_observacoes, cl_uf FROM Cliente WHERE cl_id = :id";
+            this.Conectar();
+            String sql = "SELECT cl_id, cl_nome, cl_datanascimento, cl_cpf, cl_rg, cl_telefone, cl_celular, cl_telefone2, cl_cep, cl_endereco, cl_numero, cl_bairro, cl_cidade, cl_email, cl_nomepai, cl_nomemae, cl_profissao, cl_observacoes, cl_uf FROM Cliente";
+            //if (cl_cpf != "")
+            //{
+            //    sql += "where cl_cpf Like @cl_cpf";
+            //}
+            List<Cliente> listaPesquisar = new List<Cliente>();
+            try {
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, this.conexao);
-                cmd.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = filtro.Cl_id;
-                //Classe para absover uma resposta de um select
+                //if (cl_cpf != "")
+                //{
+                //    cmd.Parameters.AddWithValue("@cl_cpf", "%"+cl_cpf+"%");
+                //}
                 NpgsqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    retorno.Cl_id = dr.GetInt32(dr.GetOrdinal("cl_id"));
-                    retorno.Cl_nome = dr.GetString(dr.GetOrdinal("cl_nome"));
-                    retorno.Cl_datanascimento = dr.GetDateTime(dr.GetOrdinal("cl_datanascimento"));
-                    retorno.Cl_cpf = dr.GetString(dr.GetOrdinal("cl_cpf"));
-                    retorno.Cl_rg = dr.GetString(dr.GetOrdinal("cl_rg"));
-                    retorno.Cl_telefone = dr.GetString(dr.GetOrdinal("cl_telefone"));
-                    retorno.Cl_celular = dr.GetString(dr.GetOrdinal("cl_celular"));
-                    retorno.Cl_telefone2 = dr.GetString(dr.GetOrdinal("cl_telefone2"));
-                    retorno.Cl_cep = dr.GetString(dr.GetOrdinal("cl_cep"));
-                    retorno.Cl_endereco = dr.GetString(dr.GetOrdinal("cl_endereco"));
-                    retorno.Cl_numero = dr.GetString(dr.GetOrdinal("cl_numero"));
-                    retorno.Cl_bairro = dr.GetString(dr.GetOrdinal("cl_bairro"));
-                    retorno.Cl_cidade = dr.GetString(dr.GetOrdinal("cl_cidade"));
-                    retorno.Cl_email = dr.GetString(dr.GetOrdinal("cl_email"));
-                    retorno.Cl_nomepai = dr.GetString(dr.GetOrdinal("cl_nomepai"));
-                    retorno.Cl_nomemae = dr.GetString(dr.GetOrdinal("cl_nomemae"));
-                    retorno.Cl_profissao = dr.GetString(dr.GetOrdinal("cl_profissao"));
-                    retorno.Cl_observacoes = dr.GetString(dr.GetOrdinal("cl_observacoes"));
-                    retorno.Cl_uf = dr.GetString(dr.GetOrdinal("cl_uf"));
+                    Cliente cliente = new Cliente();
+                    cliente.Cl_id = dr.GetInt32(dr.GetOrdinal("cl_id"));
+                    cliente.Cl_nome = dr.GetString(dr.GetOrdinal("cl_nome"));
+                    cliente.Cl_datanascimento = DateTime.(dr.GetString(dr.GetOrdinal("cl_dtnascimento")));
+                    cliente.Cl_cpf = dr.GetString(dr.GetOrdinal("cl_cpf"));
+                    cliente.Cl_rg = dr.GetString(dr.GetOrdinal("cl_rg"));
+                    cliente.Cl_telefone = dr.GetString(dr.GetOrdinal("cl_telefone"));
+                    cliente.Cl_celular = dr.GetString(dr.GetOrdinal("cl_celular"));
+                    cliente.Cl_telefone2 = dr.GetString(dr.GetOrdinal("cl_telefone2"));
+                    cliente.Cl_cep = dr.GetString(dr.GetOrdinal("cl_cep"));
+                    cliente.Cl_endereco = dr.GetString(dr.GetOrdinal("cl_endereco"));
+                    cliente.Cl_numero = dr.GetString(dr.GetOrdinal("cl_numero"));
+                    cliente.Cl_bairro = dr.GetString(dr.GetOrdinal("cl_bairro"));
+                    cliente.Cl_cidade = dr.GetString(dr.GetOrdinal("cl_cidade"));
+                    cliente.Cl_email = dr.GetString(dr.GetOrdinal("cl_email"));
+                    cliente.Cl_nomepai = dr.GetString(dr.GetOrdinal("cl_nomepai"));
+                    cliente.Cl_nomemae = dr.GetString(dr.GetOrdinal("cl_nomemae"));
+                    cliente.Cl_profissao = dr.GetString(dr.GetOrdinal("cl_profissao"));
+                    cliente.Cl_observacoes = dr.GetString(dr.GetOrdinal("cl_observacoes"));
+                    cliente.Cl_uf = dr.GetString(dr.GetOrdinal("cl_uf"));
+
+                    listaPesquisar.Add(cliente);
                 }
-                //liberando a memoria 
-                cmd.Dispose();
-                //fechando a conexao
+
                 this.Desconectar();
+                return listaPesquisar;
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Erro ao Conectar ao BD e Excluir Dados " + ex.Message);
+                throw new Exception("Erro ao Conectar ao BD e Alterar Dados " + ex.Message);
             }
+        }
 
-            return retorno;
-        }*/
 
         public void Excluir(Cliente cliente)
         {
