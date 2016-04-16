@@ -8,14 +8,38 @@ namespace SysOtica
 {
     public class ProdutoFornecedor
     {
+        private int pf_id;
         private int pf_qtd;
         private DateTime pf_dtentrada;
-        private Produto pr_id;
         private Fornecedor fr_id;
         private string pf_tipo;
         private string pf_observacoes;
+        private List<Produto> pr_id;
 
-        
+        public ProdutoFornecedor(int pf_id, int pf_qtd, DateTime pf_dtentrada, Fornecedor fr_id, string pf_tipo, string pf_observacoes, List<Produto> pr_id)
+        {
+            this.pf_id = pf_id;
+            this.pf_qtd = pf_qtd;
+            this.pf_dtentrada = pf_dtentrada;
+            this.fr_id = new Fornecedor();
+            this.pf_tipo = pf_tipo;
+            this.pf_observacoes = pf_observacoes;
+            this.pr_id = new List<Produto>();
+        }
+
+        public int Pf_id
+        {
+            get
+            {
+                return pf_id;
+            }
+
+            set
+            {
+                pf_id = value;
+            }
+        }
+
         public int Pf_qtd
         {
             get
@@ -39,19 +63,6 @@ namespace SysOtica
             set
             {
                 pf_dtentrada = value;
-            }
-        }
-
-        public Produto Pr_id
-        {
-            get
-            {
-                return pr_id;
-            }
-
-            set
-            {
-                pr_id = value;
             }
         }
 
@@ -91,6 +102,19 @@ namespace SysOtica
             set
             {
                 pf_observacoes = value;
+            }
+        }
+
+        public List<Produto> Pr_id
+        {
+            get
+            {
+                return pr_id;
+            }
+
+            set
+            {
+                pr_id = value;
             }
         }
     }

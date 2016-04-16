@@ -32,7 +32,6 @@
             this.buttonAtualizar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonPesquisar = new System.Windows.Forms.Button();
-            this.maskedTextBoxCPF = new System.Windows.Forms.MaskedTextBox();
             this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,16 +54,17 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.textBoxPesqCPF = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxPesqCPF);
             this.groupBox1.Controls.Add(this.buttonAtualizar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.buttonPesquisar);
-            this.groupBox1.Controls.Add(this.maskedTextBoxCPF);
             this.groupBox1.Controls.Add(this.dataGridViewCliente);
             this.groupBox1.Location = new System.Drawing.Point(-2, -3);
             this.groupBox1.Name = "groupBox1";
@@ -93,21 +93,13 @@
             // 
             // buttonPesquisar
             // 
-            this.buttonPesquisar.Location = new System.Drawing.Point(265, 22);
+            this.buttonPesquisar.Location = new System.Drawing.Point(327, 22);
             this.buttonPesquisar.Name = "buttonPesquisar";
             this.buttonPesquisar.Size = new System.Drawing.Size(75, 23);
             this.buttonPesquisar.TabIndex = 3;
             this.buttonPesquisar.Text = "Pesquisar";
             this.buttonPesquisar.UseVisualStyleBackColor = true;
             this.buttonPesquisar.Click += new System.EventHandler(this.buttonPesquisar_Click);
-            // 
-            // maskedTextBoxCPF
-            // 
-            this.maskedTextBoxCPF.Location = new System.Drawing.Point(135, 24);
-            this.maskedTextBoxCPF.Mask = "000.000.000-00";
-            this.maskedTextBoxCPF.Name = "maskedTextBoxCPF";
-            this.maskedTextBoxCPF.Size = new System.Drawing.Size(109, 20);
-            this.maskedTextBoxCPF.TabIndex = 1;
             // 
             // dataGridViewCliente
             // 
@@ -330,6 +322,13 @@
             this.button5.Text = "Sair";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // textBoxPesqCPF
+            // 
+            this.textBoxPesqCPF.Location = new System.Drawing.Point(136, 27);
+            this.textBoxPesqCPF.Name = "textBoxPesqCPF";
+            this.textBoxPesqCPF.Size = new System.Drawing.Size(173, 20);
+            this.textBoxPesqCPF.TabIndex = 6;
+            // 
             // frmListarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,7 +356,6 @@
         private System.Windows.Forms.Button buttonAtualizar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonPesquisar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxCPF;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
@@ -379,5 +377,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.TextBox textBoxPesqCPF;
     }
 }

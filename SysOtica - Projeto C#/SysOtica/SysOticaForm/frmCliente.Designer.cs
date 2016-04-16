@@ -32,11 +32,9 @@
             this.textBoxUF = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
-            this.buttonSalvar = new System.Windows.Forms.Button();
             this.maskedTextBoxCelular = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxTelefone2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.richTextBoxObservacoes = new System.Windows.Forms.RichTextBox();
@@ -66,22 +64,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonSair = new System.Windows.Forms.Button();
             this.buttonLimpar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.textBoxCPF = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.textBoxCPF);
             this.groupBox1.Controls.Add(this.textBoxUF);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.maskedTextBoxCep);
             this.groupBox1.Controls.Add(this.maskedTextBoxCelular);
             this.groupBox1.Controls.Add(this.maskedTextBoxTelefone2);
             this.groupBox1.Controls.Add(this.maskedTextBoxTelefone);
-            this.groupBox1.Controls.Add(this.maskedTextBoxCpf);
             this.groupBox1.Controls.Add(this.maskedTextBoxDataNascimento);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.richTextBoxObservacoes);
@@ -142,16 +142,6 @@
             this.maskedTextBoxCep.Size = new System.Drawing.Size(125, 20);
             this.maskedTextBoxCep.TabIndex = 7;
             // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.Location = new System.Drawing.Point(658, 393);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalvar.TabIndex = 1;
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
-            // 
             // maskedTextBoxCelular
             // 
             this.maskedTextBoxCelular.BeepOnError = true;
@@ -178,15 +168,6 @@
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(137, 20);
             this.maskedTextBoxTelefone.TabIndex = 4;
-            // 
-            // maskedTextBoxCpf
-            // 
-            this.maskedTextBoxCpf.BeepOnError = true;
-            this.maskedTextBoxCpf.Location = new System.Drawing.Point(6, 65);
-            this.maskedTextBoxCpf.Mask = "000,000,000-00";
-            this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
-            this.maskedTextBoxCpf.Size = new System.Drawing.Size(140, 20);
-            this.maskedTextBoxCpf.TabIndex = 2;
             // 
             // maskedTextBoxDataNascimento
             // 
@@ -428,6 +409,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome";
             // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.Location = new System.Drawing.Point(658, 393);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvar.TabIndex = 1;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            // 
             // buttonSair
             // 
             this.buttonSair.Location = new System.Drawing.Point(11, 393);
@@ -447,6 +438,13 @@
             this.buttonLimpar.Text = "Limpar";
             this.buttonLimpar.UseVisualStyleBackColor = true;
             this.buttonLimpar.Click += new System.EventHandler(this.buttonLimpar_Click);
+            // 
+            // textBoxCPF
+            // 
+            this.textBoxCPF.Location = new System.Drawing.Point(9, 65);
+            this.textBoxCPF.Name = "textBoxCPF";
+            this.textBoxCPF.Size = new System.Drawing.Size(137, 20);
+            this.textBoxCPF.TabIndex = 19;
             // 
             // frmCliente
             // 
@@ -504,7 +502,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBoxDataNascimento;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxTelefone2;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxTelefone;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxCpf;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCep;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCelular;
         private System.Windows.Forms.Button buttonSair;
@@ -513,5 +510,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox textBoxUF;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxCPF;
     }
 }

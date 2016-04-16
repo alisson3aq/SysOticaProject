@@ -12,7 +12,7 @@ namespace SysOtica
     {
         private int rc_id;
         private Cliente cl_id;
-        private Venda vn_id; 
+        private Venda vn_id;
         private DateTime rc_historico;
         private double rc_lodesferico;
         private double rc_loeesferico;
@@ -39,6 +39,40 @@ namespace SysOtica
         private string rc_observacoes;
         private DateTime rc_data;
         private DateTime rc_dtavalidade;
+        
+
+        public Receita(int rc_id, Cliente cl_id, Venda vn_id, DateTime rc_historico, double rc_lodesferico, double rc_loeesferico, double rc_podesferico, double rc_poeesferico, double rc_lodcilindrico, double rc_loecilindrico, double rc_podcilindrico, double rc_poecilindrico, double rc_lodeixo, double rc_loeeixo, double rc_podeixo, double rc_poeeixo, double rc_lodaltura, double rc_loealtura, double rc_podaltura, double rc_poealtura, double rc_loddnp, double rc_loednp, double rc_poddnp, double rc_poednp, double rc_adicao, string rc_nomemedico, string rc_observacoes, DateTime rc_data, DateTime rc_dtavalidade)
+        {
+            this.rc_id = rc_id;
+            this.cl_id = new Cliente();
+            this.vn_id = new Venda();
+            this.rc_historico = rc_historico;
+            this.rc_lodesferico = rc_lodesferico;
+            this.rc_loeesferico = rc_loeesferico;
+            this.rc_podesferico = rc_podesferico;
+            this.rc_poeesferico = rc_poeesferico;
+            this.rc_lodcilindrico = rc_lodcilindrico;
+            this.rc_loecilindrico = rc_loecilindrico;
+            this.rc_podcilindrico = rc_podcilindrico;
+            this.rc_poecilindrico = rc_poecilindrico;
+            this.rc_lodeixo = rc_lodeixo;
+            this.rc_loeeixo = rc_loeeixo;
+            this.rc_podeixo = rc_podeixo;
+            this.rc_poeeixo = rc_poeeixo;
+            this.rc_lodaltura = rc_lodaltura;
+            this.rc_loealtura = rc_loealtura;
+            this.rc_podaltura = rc_podaltura;
+            this.rc_poealtura = rc_poealtura;
+            this.rc_loddnp = rc_loddnp;
+            this.rc_loednp = rc_loednp;
+            this.rc_poddnp = rc_poddnp;
+            this.rc_poednp = rc_poednp;
+            this.rc_adicao = rc_adicao;
+            this.rc_nomemedico = rc_nomemedico;
+            this.rc_observacoes = rc_observacoes;
+            this.rc_data = rc_data;
+            this.rc_dtavalidade = rc_dtavalidade;
+        }
 
         public int Rc_id
         {
@@ -66,7 +100,7 @@ namespace SysOtica
             }
         }
 
-        internal Venda Vn_id
+        public Venda Vn_id
         {
             get
             {

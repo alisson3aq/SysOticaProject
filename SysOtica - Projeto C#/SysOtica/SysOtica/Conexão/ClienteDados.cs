@@ -183,24 +183,25 @@ namespace SysOtica.Conexão
         {
             this.Conectar();
             String sql = "SELECT cl_id, cl_nome, cl_datanascimento, cl_cpf, cl_rg, cl_telefone, cl_celular, cl_telefone2, cl_cep, cl_endereco, cl_numero, cl_bairro, cl_cidade, cl_email, cl_nomepai, cl_nomemae, cl_profissao, cl_observacoes, cl_uf FROM Cliente";
-            //if (cl_cpf != "")
-            //{
-            //    sql += "where cl_cpf Like @cl_cpf";
-            //}
+            if (cl_cpf != "")
+            {
+                sql += " where cl_cpf iLike @cl_cpf";
+            }
             List<Cliente> listaPesquisar = new List<Cliente>();
-            try {
+            try
+            {
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, this.conexao);
-                //if (cl_cpf != "")
-                //{
-                //    cmd.Parameters.AddWithValue("@cl_cpf", "%"+cl_cpf+"%");
-                //}
+                if (cl_cpf != "")
+                {
+                    cmd.Parameters.AddWithValue("@cl_cpf", "%"+cl_cpf+"%" );
+                }
                 NpgsqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     Cliente cliente = new Cliente();
                     cliente.Cl_id = dr.GetInt32(dr.GetOrdinal("cl_id"));
                     cliente.Cl_nome = dr.GetString(dr.GetOrdinal("cl_nome"));
-                    cliente.Cl_datanascimento = DateTime.(dr.GetString(dr.GetOrdinal("cl_dtnascimento")));
+                    cliente.Cl_datanascimento = DateTime.Parse(dr.GetString(dr.GetOrdinal("cl_dtnascimento")));
                     cliente.Cl_cpf = dr.GetString(dr.GetOrdinal("cl_cpf"));
                     cliente.Cl_rg = dr.GetString(dr.GetOrdinal("cl_rg"));
                     cliente.Cl_telefone = dr.GetString(dr.GetOrdinal("cl_telefone"));
@@ -226,7 +227,7 @@ namespace SysOtica.Conexão
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao Conectar ao BD e Alterar Dados " + ex.Message);
+                throw new Exception("Erro ao Conectar ao BD e Excluir Dados " + ex.Message);
             }
         }
 
