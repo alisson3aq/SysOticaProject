@@ -66,7 +66,7 @@ namespace SysOticaForm
                 produto = (dataGridViewProduto.SelectedRows[0].DataBoundItem as Produto);
                 Fachada fac = new Fachada();
                 fac.ExcluirProduto(produto);
-                MessageBox.Show("Cliente excluido com sucesso");
+                MessageBox.Show("Cliente excluido com sucesso!");
             }
             catch(Exception ex)
             {

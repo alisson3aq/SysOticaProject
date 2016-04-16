@@ -114,20 +114,6 @@ namespace SysOtica.Conexão
 
         }
 
-        public void inserirProduto(Produto produto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void alterarProduto(Produto produto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void excluirProduto(Produto produto)
-        {
-            throw new NotImplementedException();
-        }
 
         public void verificarDuplicidade(Produto produto)
         {
