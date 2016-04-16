@@ -77,6 +77,7 @@
             this.buttonExcluir.TabIndex = 16;
             this.buttonExcluir.Text = "Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // Column9
             // 
@@ -183,6 +184,7 @@
             this.Column8,
             this.Column9});
             this.dataGridViewProduto.Location = new System.Drawing.Point(14, 56);
+            this.dataGridViewProduto.MultiSelect = false;
             this.dataGridViewProduto.Name = "dataGridViewProduto";
             this.dataGridViewProduto.ReadOnly = true;
             this.dataGridViewProduto.Size = new System.Drawing.Size(480, 223);

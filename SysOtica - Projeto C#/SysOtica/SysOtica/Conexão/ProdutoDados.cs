@@ -60,13 +60,14 @@ namespace SysOtica.Conexão
             }
 
         }
-        public void excluir(int id)
+        public void excluir(Produto produto)
         {
             try
             {
                 this.Conectar();
-                String sql = "DELETE FROM produto WHERE pr_id = " + id;
+                String sql = "DELETE FROM produto WHERE pr_id = :pr_id";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, this.conexao);
+                cmd.Parameters.Add("@pr_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = produto.Pr_id;
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 this.Desconectar();

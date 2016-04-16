@@ -67,12 +67,26 @@ namespace SysOtica.Negócio
         #region Carlão
 
  
-
+        //Receita
         ReceitaControlador recControlador = new ReceitaControlador();
         public void CadastraReceita(Receita receita)
         {
             recControlador.Inserir(receita);
         }
+
+        //Produto
+        ProdutoControlador controladorProduto = new ProdutoControlador();
+        public void ExcluirProduto(Produto produto)
+        {
+            controladorProduto.Excluir(produto);
+        }
+
+        public void CadastrarProduto(Produto produto)
+        {
+            controladorProduto.Cadastra(produto);
+        }
+
+
 
 
         #endregion

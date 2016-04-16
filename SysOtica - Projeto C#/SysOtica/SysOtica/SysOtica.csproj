@@ -32,16 +32,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Security">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Atividade\Atividade\bin\Mono.Security.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Atividade\Atividade\bin\Npgsql.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql.EntityFramework">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Atividade\Atividade\bin\Npgsql.EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql.EntityFrameworkLegacy">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Atividade\Atividade\bin\Npgsql.EntityFrameworkLegacy.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.EntityFrameworkLegacy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
